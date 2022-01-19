@@ -6,11 +6,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['home']">Inicio</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Resultado Votacion</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['resultado']">Resultado Votacion</a>
         </li>
       </ul>
     </div>
