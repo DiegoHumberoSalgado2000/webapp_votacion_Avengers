@@ -7,7 +7,6 @@ export class VengadoresService {
             nombre:'Anthony Edward Stark',
             alias: 'Iron Man',
             img:'assets/img/avengers/IronMan.webp',
-
             especie:'Human',
             nacionalidad:'American',
             fecha_nacimiento :'May 29, 1970',
@@ -78,6 +77,7 @@ export class VengadoresService {
         },{
             nombre:"T'Challa",
             alias: 'Black Panther',
+            img:'assets/img/avengers/BlackPanther.webp',
             especie:'Human',
             nacionalidad:'Wakandan',
             fecha_nacimiento :'NA',

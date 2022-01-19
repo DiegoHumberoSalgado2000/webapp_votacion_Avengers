@@ -1,7 +1,24 @@
-<h1>Vote cual es el mejor y peor <small> Vengador</small> del UCM</h1>
+<h2>Vote cual es el mejor y peor <small> Vengador</small> del UCM</h2>
 <hr>
 
-<div class="card-columns">
-
-</div>
-
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="card animated fadeIn fast" *ngFor="let vengador of vengadores; let i= index">
+  <div class="col">
+    <div class="card">
+      <img class="card-img-top" [src]="vengador.img" [alt]="vengador.nombre">
+      <div class="card-body">
+        <h4 class="card-title">{{vengador.nombre}}</h4>
+        <p class="card-text"><small class="text-muted">{{vengador.alias}}</small></p>
+        <p class="card-text"><small class="text-muted">{{vengador.especie}}</small></p>
+        <p class="card-text"><small class="text-muted">{{vengador.nacionalidad}}</small></p>
+        <p class="card-text"><small class="text-muted">{{vengador.fecha_nacimiento}}</small></p>
+        <p class="card-text">{{vengador.frase}}</p></div>
+    </div>
+    <div class="card-footer">
+      <div class="d-grid gap-2">
+        <button  (click)="verVengador(i)" type="button" class="btn btn-outline-success">me gusta</button>
+        <button  (click)="verVengador(i)" type="button" class="btn btn-outline-danger">no me gusta</button>
+      </div>
+    </div>
+  </div>
+  </div>
