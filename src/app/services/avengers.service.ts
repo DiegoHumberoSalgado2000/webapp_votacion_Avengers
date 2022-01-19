@@ -1,12 +1,12 @@
 import { Injectable } from "@angular/core";
 @Injectable()
-export class AvengersService {
+export class VengadoresService {
 
     private avengers:Avengers[]=[
         {
             nombre:'Anthony Edward Stark',
             alias: 'Iron Man',
-            img:'assets/img/avengers/fornite.png',
+            img:'assets/img/IronMan.webp',
             especie:'Human',
             nacionalidad:'American',
             fecha_nacimiento :'May 29, 1970',
@@ -14,7 +14,7 @@ export class AvengersService {
         },{
             nombre:'Steven Grant Rogers',
             alias: 'Captain America',
-            img:'assets/img/avengers/fornite.png',
+            img:'assets/img/CapAmerica.webp',
             especie:'Human',
             nacionalidad:'American',
             fecha_nacimiento :'July 4, 1918',
@@ -22,7 +22,7 @@ export class AvengersService {
         },{
             nombre:'Thor Odinson',
             alias: 'Thor',
-            img:'assets/img/avengers/fornite.png',
+            img:'assets/img/Thor.webp',
             especie:'Asgardian',
             nacionalidad:'Asgardian',
             fecha_nacimiento :'964 A.D.–965 A.D.',
@@ -30,7 +30,7 @@ export class AvengersService {
         },{
             nombre:'Bruce Banner',
             alias: 'Hulk',
-            img:'assets/img/avengers/fornite.png',
+            img:'assets/img/Hulk.webp',
             especie:'Human',
             nacionalidad:'American Sakaaran',
             fecha_nacimiento :'December 18, 1969',
@@ -38,7 +38,7 @@ export class AvengersService {
         },{
             nombre:'Scott Edward Harris Lang',
             alias: 'Ant Man',
-            img:'assets/img/avengers/fornite.png',
+            img:'assets/img/AntMan.webp',
             especie:'Human',
             nacionalidad:'American',
             fecha_nacimiento :'NA',
@@ -46,7 +46,7 @@ export class AvengersService {
         },{
             nombre:'Peter Benjamin Parker',
             alias: 'Spider Man',
-            img:'assets/img/avengers/fornite.png',
+            img:'assets/img/SpiderMan.webp',
             especie:'Human',
             nacionalidad:'American',
             fecha_nacimiento :'August 10, 2001',
@@ -54,23 +54,23 @@ export class AvengersService {
         },{
             nombre:'Stephen Vincent Strange',
             alias: 'Doctor Strange',
-            img:'assets/img/avengers/fornite.png',
+            img:'assets/img/DoctorStrange.webp',
             especie:'Human',
             nacionalidad:'American',
             fecha_nacimiento :'NA',
             frase  : "What is your job exactly, besides making balloon animals? Protecting your reality, douchebag."
         },{
-            nombre:'Stephen Vincent Strange',
-            alias: 'Doctor Strange',
-            img:'assets/img/avengers/fornite.png',
+            nombre:'Carol Susan Jane Danvers',
+            alias: 'Captain Marvel',
+            img:'assets/img/CapMarvel.webp',
             especie:'Human',
             nacionalidad:'American',
-            fecha_nacimiento :'NA',
-            frase  : "What is your job exactly, besides making balloon animals? Protecting your reality, douchebag."
+            fecha_nacimiento :'Mid-1960s',
+            frase  : "I'm coming to end it. The war, the lies, all of it."
         },{
             nombre:"T'Challa",
             alias: 'Black Panther',
-            img:'assets/img/avengers/fornite.png',
+            img:'assets/img/BlackPanther.webp',
             especie:'Human',
             nacionalidad:'Wakandan',
             fecha_nacimiento :'NA',
@@ -78,7 +78,7 @@ export class AvengersService {
         },{
             nombre:"Loki Laufeyson",
             alias: 'Loki',
-            img:'assets/img/avengers/fornite.png',
+            img:'assets/img/Loki.webp',
             especie:'Frost Giant',
             nacionalidad:'Asgardian Jotun',
             fecha_nacimiento :'965 A.D.',
@@ -86,7 +86,7 @@ export class AvengersService {
         },{
             nombre:"Natalia Alianovna Romanoff",
             alias: 'Black Widow',
-            img:'assets/img/avengers/fornite.png',
+            img:'assets/img/BlackWidow.webp',
             especie:'Human',
             nacionalidad:'Russian',
             fecha_nacimiento :'December 3, 1984',
@@ -96,7 +96,7 @@ export class AvengersService {
     ];
 
     constructor(){
-
+    console.log('Servicio listo para usarse');
     }
 
     getVideoavengers():Avengers[]{
@@ -109,6 +109,7 @@ export class AvengersService {
     buscarVideoavengers(termino:string):Avengers[]{
         let videos:Avengers[] = [];
         termino=termino.toLowerCase();
+
         for(let videojuego of this.avengers){
             let nombre = videojuego.nombre.toLowerCase();
             if(nombre.indexOf(termino)>=0 ){

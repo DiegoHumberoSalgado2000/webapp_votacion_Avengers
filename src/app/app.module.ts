@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ResultadoComponent } from './components/resultado/resultado.component';
 import { VengadoresComponent } from './components/vengadores/vengadores.component';
 import {APP_ROUTING} from "./app.routes";
+import {VengadoresService} from "./services/avengers.service";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import {APP_ROUTING} from "./app.routes";
     BrowserModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [
+    VengadoresService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
