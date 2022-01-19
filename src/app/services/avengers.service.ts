@@ -116,22 +116,17 @@ export class VengadoresService {
         return this.avengers;
     }
 
-    getVideojuego(id:number){
-        return this.avengers[id];
-    }
-    buscarVideoavengers(termino:string):Avengers[]{
-        let videos:Avengers[] = [];
-        termino=termino.toLowerCase();
+  like(idx: number) {
+    let likes: number = this.avengers[idx].like;
+    likes++;
+    this.avengers[idx].like = likes;
+  }
 
-        for(let videojuego of this.avengers){
-            let nombre = videojuego.nombre.toLowerCase();
-            if(nombre.indexOf(termino)>=0 ){
-                videos.push(videojuego);
-
-            }
-        }
-        return videos;
-    }
+  disLike(idx: number) {
+    let disLikes: number = this.avengers[idx].dislike;
+    disLikes++;
+    this.avengers[idx].dislike = disLikes;
+  }
 
 }
 

@@ -16,9 +16,13 @@
     </div>
     <div class="card-footer">
       <div class="d-grid gap-2">
-        <button  (click)="verVengador(i)" type="button" class="btn btn-outline-success">me gusta</button>
-        <button  (click)="verVengador(i)" type="button" class="btn btn-outline-danger">no me gusta</button>
+        <button  (click)="setLike(i)" type="button" class="btn btn-outline-success">me gusta</button>
+        <p class="card-text"><small class="text-muted">likes: {{vengador.like}}</small></p>
+        <hr>
+        <button  (click)="setDislike(i)" type="button" class="btn btn-outline-danger">no me gusta</button>
+        <p class="card-text"><small class="text-muted">Dislikes: {{vengador.dislike}}</small></p>
       </div>
     </div>
   </div>
   </div>
+</div>
