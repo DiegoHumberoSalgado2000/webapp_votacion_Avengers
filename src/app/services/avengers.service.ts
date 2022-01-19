@@ -1,12 +1,13 @@
 import { Injectable } from "@angular/core";
 @Injectable()
-export class AvengersService {
+export class VengadoresService {
 
     private avengers:Avengers[]=[
         {
             nombre:'Anthony Edward Stark',
             alias: 'Iron Man',
             img:'assets/img/avengers/IronMan.webp',
+
             especie:'Human',
             nacionalidad:'American',
             fecha_nacimiento :'May 29, 1970',
@@ -17,6 +18,7 @@ export class AvengersService {
             nombre:'Steven Grant Rogers',
             alias: 'Captain America',
             img:'assets/img/avengers/CapAmerica.webp',
+
             especie:'Human',
             nacionalidad:'American',
             fecha_nacimiento :'July 4, 1918',
@@ -76,7 +78,6 @@ export class AvengersService {
         },{
             nombre:"T'Challa",
             alias: 'Black Panther',
-            img:'assets/img/avengers/BlackPanther.webp',
             especie:'Human',
             nacionalidad:'Wakandan',
             fecha_nacimiento :'NA',
@@ -108,7 +109,7 @@ export class AvengersService {
     ];
 
     constructor(){
-
+    console.log('Servicio listo para usarse');
     }
 
     getVideoavengers():Avengers[]{
@@ -121,6 +122,7 @@ export class AvengersService {
     buscarVideoavengers(termino:string):Avengers[]{
         let videos:Avengers[] = [];
         termino=termino.toLowerCase();
+
         for(let videojuego of this.avengers){
             let nombre = videojuego.nombre.toLowerCase();
             if(nombre.indexOf(termino)>=0 ){
