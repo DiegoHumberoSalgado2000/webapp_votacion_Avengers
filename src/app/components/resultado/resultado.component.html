@@ -1,7 +1,28 @@
 <h2>Resultados de la Votacion</h2>
 <hr>
 
-<div class="row">
-
+<div class="row row-cols-1 row-cols-md-2 g-4">
+<div class="card animated fadeIn fast" *ngFor="let vengador of vengadorOrganizado; let i=index">
+  <div class="col">
+    <div class="card">
+      <h1 *ngIf="i==0"> <small>likes(me gusta)</small></h1>
+      <h1 *ngIf="i==1"> <small>Dislikes (no me gusta)</small></h1>
+      <img class="card-img-top" [src]="vengador.img" [alt]="vengador.alias">
+      <div class="card-body">
+        <h4 class="card-title">{{vengador.nombre}}</h4>
+        <p class="card-text"><small class="text-muted">{{vengador.alias}}</small></p>
+        <p class="card-text"><small class="text-muted">{{vengador.especie}}</small></p>
+        <p class="card-text"><small class="text-muted">{{vengador.nacionalidad}}</small></p>
+        <p class="card-text"><small class="text-muted">{{vengador.fecha_nacimiento}}</small></p>
+        <p class="card-text">{{vengador.frase}}</p></div>
+      <hr>
+      <p class="card-text"><small class="text-muted">Likes: {{vengador.like}}</small></p>
+      <hr>
+      <p class="card-text"><small class="text-muted">DisLikes: {{vengador.dislike}}</small></p>
+    </div>
+    </div>
+  </div>
 </div>
+
+
 

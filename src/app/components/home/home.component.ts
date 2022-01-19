@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {VengadoresService,Avengers} from "../../services/avengers.service";
 import {Router} from "@angular/router";
 
@@ -16,7 +16,12 @@ vengadores:Avengers[]=[];
 this.vengadores=this._avengerService.getVideoavengers();
   }
 
-verVengador(idx: number){
-this.router.navigate(['/vengador/',idx]);
+public setLike(i:number){
+    this._avengerService.like(i);
 }
+
+public setDislike(i:number){
+    this._avengerService.disLike(i);
+}
+
 }
